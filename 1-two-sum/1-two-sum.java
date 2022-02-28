@@ -17,6 +17,7 @@ class Solution {
         //     }
         // }
         
+        //Using HashMap
         HashMap<Integer, Integer> map = new HashMap<>();
         
         
