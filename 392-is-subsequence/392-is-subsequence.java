@@ -9,7 +9,9 @@ class Solution {
             we check if the frequency of that letter is greater than zero in alph
             if yes
                 we reduce the frequency of that and increase both pointers by one.
-        Once we reach the end of string s
+        Once we reach the end of string s, we stop the loop. 
+        Now check the frequencies of of letters in alph. If any one of the alph values is
+        not not zero, return false, else true.
     */
     
     public boolean isSubsequence(String s, String t) {
