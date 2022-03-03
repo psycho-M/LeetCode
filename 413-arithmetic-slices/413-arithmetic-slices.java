@@ -13,6 +13,8 @@ class Solution {
         
         Final ans = 3 + 6 = 9
         
+        
+        Time Complexit : O(n)
         I don't know DP yet, so idk what to call this approach.
     */
     
