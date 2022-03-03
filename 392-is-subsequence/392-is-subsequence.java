@@ -2,13 +2,14 @@ class Solution {
     /*
         A two pointer problem.
         First we create an int array of length 26 (to store frequency of the letters), alph, and
-        iterate over s char array to get store the frequencies of the letters into alph.
+        iterate over s char array to store the frequencies of the letters into alph.
         Now we use two pointers, one on the strting t, the other on the charArray of s.
         Then compare the letters at the current pointer positions of s and t.
         if same
             we check if the frequency of that letter is greater than zero in alph
             if yes
-                we reduce the frequency of that
+                we reduce the frequency of that and increase both pointers by one.
+        Once we reach the end of string s
     */
     
     public boolean isSubsequence(String s, String t) {
@@ -29,6 +30,8 @@ class Solution {
                 alph[c - 'a']--;
                 i++;
             }
+            
+            if(i == sLen) break;
         }
         
         for(int n : alph)
