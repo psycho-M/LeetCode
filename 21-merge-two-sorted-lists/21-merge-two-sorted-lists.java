@@ -10,14 +10,14 @@
  */
 
 /*
-    mergin two sorted linked list(ll).
-    we use two pointer method here, one on each ll.
+    merging two sorted linked list(LL).
+    we use two pointer method here, one on each LL.
     
     We compare the value of nodes at each pointer and add the the node with the smaller
-    value to the mergeing ll.
+    value to the mergeing LL.
     
-    Once we reach the end of one of the ll, we add the rest of the nodes of other ll (if there
-    are nodes that haven't been compared) and add them to the end of merges ll.
+    Once we reach the end of one of the LL, we add the rest of the nodes of other LL (if there
+    are nodes that haven't been compared) and add them to the end of merged LL.
 */
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
