@@ -1,4 +1,12 @@
 class Solution {
+    
+    /*
+        A two pointer approach.
+        we have 2 variables, max for the max consecutive ones and count for the current number of consecutive ones.
+        We count the consecutive ones and check if the count is greater the max. 
+        When we encounter 0, we reset the count to 0.
+    */
+    
     public int findMaxConsecutiveOnes(int[] nums) {
         if(nums.length == 1) return nums[0] == 1 ? 1 : 0;
         int i = 0, start = 0, max = 0, count = 0;
