@@ -10,9 +10,10 @@ class Solution {
                 l++;
                 // System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
                 while(sum >= target) {
-                    min = Math.min(min, r - l);
                     sum -= nums[l];
                     l++;
+                    
+                    if(sum >= target) min = Math.min(min, r - l); 
                     // System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
                 }
                 
