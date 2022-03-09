@@ -8,18 +8,18 @@ class Solution {
                 min = Math.min(min, r - l);
                 sum -= nums[l];
                 l++;
-                System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
+                // System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
                 while(sum >= target) {
                     min = Math.min(min, r - l);
                     sum -= nums[l];
                     l++;
-                    System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
+                    // System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
                 }
                 
             } else {
                 sum += nums[r];
                 r++;
-                System.out.println(sum);
+                // System.out.println(sum);
                 // r++;
             }
         }
@@ -28,7 +28,7 @@ class Solution {
             min = Math.min(min, r - l);
             sum -= nums[l];
             l++;
-            System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
+            // System.out.println("sum = " + sum + " min = " + min + " l = " + l + " r = " + r);
         }
         
         
