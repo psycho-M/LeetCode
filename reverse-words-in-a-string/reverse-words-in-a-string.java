@@ -2,28 +2,16 @@ class Solution {
     public String reverseWords(String s) {
         s = s.trim();
         String[] str = s.split(" ");
-        int i = 0, j = str.length - 1;
-        while(i < j) {
-            String temp = str[i];
-            str[i++] = str[j];
-            str[j--] = temp;
-        }
+        int i = 0;
         
         StringBuffer res = new StringBuffer();
         i = 1;
-        for(String st : str) {
-            if(st.isBlank()) continue;
+        for(i = str.length - 1; i >= 0; i--) {
+            if(str[i].isBlank()) continue;
             res.append(" ");
-            res.append(st);
+            res.append(str[i]);
         }
         
         return res.toString().trim();
-    }
-    
-    void print(String[] str) {
-        System.out.print("[");
-        for(String s : str) {
-            
-        }
     }
 }
