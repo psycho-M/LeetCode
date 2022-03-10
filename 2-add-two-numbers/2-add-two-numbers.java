@@ -80,11 +80,11 @@ class Solution {
         ListNode res = new ListNode(0);
         
         ListNode temp = res;
-        int carry = 0;
+        int carry = 0, a, b, sum;
         while(l1 != null || l2 != null) {
-            int a = l1 != null ? l1.val : 0;
-            int b = l2 != null ? l2.val : 0;
-            int sum = a + b + carry;
+            a = l1 == null ? 0 : l1.val;
+            b = l2 == null ? 0 : l2.val;
+            sum = a + b + carry;
             carry = sum / 10;
             temp.next = new ListNode(sum % 10);
             temp = temp.next;
