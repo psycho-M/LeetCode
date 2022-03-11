@@ -36,7 +36,7 @@ class Solution {
             temp = temp.next;
         }
         
-        System.out.println(temp.val);
+        // System.out.println(temp.val);
         
         ListNode newHead = temp.next;
         temp.next = null;
