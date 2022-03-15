@@ -30,9 +30,6 @@ class Solution {
         while(i <= m) merged[k++] = n1[i++];
         
         while(j <= n) merged[k++] = n2[j++];
-        
-        // print(merged);
-        
     }
     
     public void print(int[] arr) {
