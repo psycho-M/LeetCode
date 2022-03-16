@@ -9,7 +9,7 @@ class Solution {
                 i++;
                 if(popped[j] == pushed[i - 1]) break;
             }
-            while(j < popped.length && !stack.isEmpty() && stack.peek() == popped[j]) {
+            while(!stack.isEmpty() && stack.peek() == popped[j]) {
                 stack.pop();
                 j++;
             }
