@@ -20,7 +20,6 @@ class Solution {
         Stack<Character> stack = new Stack<>();        
         char c;
         int i = 0;
-        
         while(i < len) {
             c = s.charAt(i);
             if(c == '(') {
