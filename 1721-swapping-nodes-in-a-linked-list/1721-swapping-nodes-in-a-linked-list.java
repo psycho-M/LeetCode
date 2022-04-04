@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode swapNodes(ListNode head, int k) {
-        ArrayList<Integer> arr = new ArrayList<>();
+        ArrayList<Integer> arr = new ArrayList<>(100000);
         ListNode temp = head;
         while(temp != null) {
             arr.add(temp.val);
