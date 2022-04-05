@@ -23,7 +23,7 @@ class Solution {
         arr.set(len - k, l);
         temp = head;
         for(int n : arr) {
-            temp.val = n;
+            if(temp.val != n) temp.val = n;
             temp = temp.next;
         }
         return head;
