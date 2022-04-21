@@ -7,11 +7,11 @@ class MyHashSet {
     }
     
     public void add(int key) {
-        if(!set[key]) set[key] = true;
+        set[key] = true;
     }
     
     public void remove(int key) {
-        if(set[key]) set[key] = false;
+        set[key] = false;
     }
     
     public boolean contains(int key) {
