@@ -7,15 +7,15 @@ class MyHashSet {
     }
     
     public void add(int key) {
-        if(set[key % limit] == 0) set[key % limit] = 1;
+        if(set[key] == 0) set[key] = 1;
     }
     
     public void remove(int key) {
-        if(set[key % limit] == 1) set[key % limit] = 0;
+        if(set[key] == 1) set[key] = 0;
     }
     
     public boolean contains(int key) {
-        if(set[key % limit] == 1) return true;
+        if(set[key] == 1) return true;
         else return false;
     }
 }
