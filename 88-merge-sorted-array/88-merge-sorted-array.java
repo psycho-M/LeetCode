@@ -7,19 +7,24 @@ class Solution {
         // if(n == 0) {
         //     return;
         // }
-        int[] temp = Arrays.copyOf(nums1, m);
+        // int[] temp = Arrays.copyOf(nums1, m);
         // int[] res = new int[m + n];
-        int i = 0, j = 0, k = 0;
-        while(i < m && j < n) {
-            if(temp[i] < nums2[j]) nums1[k++] = temp[i++];
-            else nums1[k++] = nums2[j++];
-        }
+//         int i = 0, j = 0, k = 0;
+//         while(i < m && j < n) {
+//             if(temp[i] < nums2[j]) nums1[k++] = temp[i++];
+//             else nums1[k++] = nums2[j++];
+//         }
         
-        while(i < m) nums1[k++] = temp[i++];
+//         while(i < m) nums1[k++] = temp[i++];
         
-        while(j < n) nums1[k++] = nums2[j++];
+//         while(j < n) nums1[k++] = nums2[j++];
         
         // nums1 = res;
         // return nums1;
+        
+        int i = m - 1, j = n - 1, k = m + n - 1;
+        while(j >= 0) {
+            nums1[k--] = i >= 0 && nums1[i] > nums2[j] ? nums1[i--] : nums2[j--];
+        }
     }
 }
