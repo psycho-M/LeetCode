@@ -3,8 +3,7 @@ class Solution {
     /*
         A simulation problem.
         
-        What we do is, for every row (except the first one), we add 1 at the start and end of that row, int this case
-        list.
+        What we do is, for every row (except the first one), we add 1 at the start and end of that row, in this case list.
         To get the jth element of ith row, we add the (j - 1)th and jth element of the row/list before current list, 
         i.e. (i - i)th row.
         
