@@ -10,7 +10,8 @@ class Solution {
             }
             
             j--;
-            if(iLBound++ == iUBound) break;
+            if(iLBound == iUBound) break;
+            iLBound++;
             
             for(i = iLBound; i <= iUBound; i++) {
                 res[i][j] = count;
@@ -18,7 +19,8 @@ class Solution {
             }
             
             i--;
-            if(jUBound-- == jLBound) break;
+            if(jUBound == jLBound) break;
+            jUBound--;
             
             for(j = jUBound; j >= jLBound; j--) {
                 res[i][j] = count;
@@ -26,7 +28,8 @@ class Solution {
             }
             
             j++;
-            if(iUBound-- == iLBound) break;
+            if(iUBound == iLBound) break;
+            iUBound--;
             
             for(i = iUBound; i >= iLBound; i--) {
                 res[i][j] = count;
