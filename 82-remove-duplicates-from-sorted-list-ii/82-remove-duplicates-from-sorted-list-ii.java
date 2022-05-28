@@ -13,7 +13,7 @@ class Solution {
     /*
         A LL question we have to delete all nodes that have duplicates.
         
-        We use 2 pointers, a curr pointer and a prev pointer to keep track of teh element before curr.
+        We use 2 pointers, a curr pointer and a prev pointer to keep track of the element before curr.
         We check 
         if curr.val is equal to curr.next.val,
             if yes,
@@ -24,8 +24,6 @@ class Solution {
                 assign curr.next to prev.next. We don't change the prev to curr here as it isn't needed.
         else 
             we assign curr to prev and then move curr to next node.
-        
-        
         
     */
     
