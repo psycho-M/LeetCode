@@ -29,9 +29,9 @@ class Solution {
         
         int rootVal = pre[preI++];
         TreeNode root = new TreeNode(rootVal);
-        
-        root.left = buildTree(pre, l, map.get(rootVal) - 1, map);
-        root.right = buildTree(pre, map.get(rootVal) + 1, r, map);
+        int mapI = map.get(rootVal);
+        root.left = buildTree(pre, l, mapI - 1, map);
+        root.right = buildTree(pre, mapI + 1, r, map);
         
         return root;
     }
