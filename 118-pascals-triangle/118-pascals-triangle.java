@@ -7,7 +7,7 @@ class Solution {
         To get the jth element of ith row, we add the (j - 1)th and jth element of the row/list before current list, 
         i.e. (i - i)th row.
         
-        ex: 7th element of the 9th row will be the summ of 6th and 7th element of the 8th row.
+        ex: 7th element of the 9th row will be the sum of 6th and 7th element of the 8th row.
     */
     
     public List<List<Integer>> generate(int numRows) {
