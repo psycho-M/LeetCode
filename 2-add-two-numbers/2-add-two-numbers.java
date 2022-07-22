@@ -94,20 +94,19 @@ class Solution {
         
 //         if(carry > 0) temp.next = new ListNode(carry);
         
-        add(res, l1, l2, 0);
-        return res.next;
+        return add(l1, l2, 0);
         
     }
     
-    void add(ListNode res, ListNode l1, ListNode l2, int carry) {
-        if(l1 == null & l2 == null) {
-            if(carry > 0) res.next = new ListNode(carry);
-            return;
+    ListNode add(ListNode l1, ListNode l2, int carry) {
+        if(l1 == null & l2 == null && carry == 0) {
+            return null;
         }
         
         if(l1 != null) carry += l1.val;
         if(l2 != null) carry += l2.val;
-        res.next = new ListNode(carry % 10);
-        add(res.next, l1 == null ? l1 : l1.next, l2 == null ? l2 : l2.next, carry / 10);
+        ListNode curr = new ListNode(carry % 10);
+        curr.next = add(l1 == null ? l1 : l1.next, l2 == null ? l2 : l2.next, carry / 10);
+        return curr;
     }
 }
