@@ -98,13 +98,13 @@ class Solution {
         
     }
     
+    //recursive soln.
     ListNode add(ListNode l1, ListNode l2, int carry) {
         if(l1 == null & l2 == null && carry == 0) {
             return null;
         }
         
-        if(l1 != null) carry += l1.val;
-        if(l2 != null) carry += l2.val;
+        carry += (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val);
         ListNode curr = new ListNode(carry % 10);
         curr.next = add(l1 == null ? l1 : l1.next, l2 == null ? l2 : l2.next, carry / 10);
         return curr;
