@@ -9,10 +9,7 @@ class Solution {
     public void checkCombination(int idx, List<Integer> curr, int sum, int[] cand, int target, 
                                     List<List<Integer>> res) {
         if(idx == cand.length || sum >= target) {
-            if(sum == target) {
-                List<Integer> temp = new ArrayList<>(curr);
-                res.add(temp);
-            } 
+            if(sum == target) res.add(new ArrayList<>(curr));
             return;
         }
         
