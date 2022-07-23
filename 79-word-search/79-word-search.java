@@ -30,14 +30,13 @@ class Solution {
             return true;
         }
         
-        char ch = board[i][j];
         board[i][j] = ' ';
         
         for(int k = 0; k < 4; k++) {
             if(wordPresent(idx + 1, i + adder[k], j + adder[k + 1], board, word)) return true;
         }
         
-        board[i][j] = ch;
+        board[i][j] = word[idx];
         
         return false;
     }
