@@ -1,6 +1,18 @@
 class Solution {
+    
+    /*
+        We use divide and conquer with merge sort
+        We do everything same as merge sort algorithn, the only difference is we 
+        merge sort the indexes of the original nums array.
+        We create a new array idx which contains indexes from 0 to n - 1.
+        Now we map the original values of nums through this idx array in the merge step.
+        We also keep a count of the number of elements merged from right array to before the left array
+        and then add the count to the count array of indexes when an element of left
+        array is being merged.
+    */
+    
     public List<Integer> countSmaller(int[] nums) {
-        // List<Integer> count = new ArrayList<>(nums.length + 1);
+        List<Integer> res = new ArrayList<>(nums.length + 1);
         
         int[] idx = new int[nums.length], temp = new int[nums.length], count = new int[nums.length];
         
@@ -10,8 +22,9 @@ class Solution {
         
         mergeSort(idx, 0, nums.length - 1, nums, temp, count);
         
-        // for(int[] i : freq) count.add(i[]);
-        return Arrays.stream(count).boxed().collect(Collectors.toList());
+        for(int i : count) res.add(i);
+        
+        return res;
     }
     
     public void mergeSort(int[] idx, int l, int r, int[] nums, int[] temp, int[] count) {
