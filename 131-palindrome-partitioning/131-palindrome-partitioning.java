@@ -16,12 +16,10 @@ class Solution {
         for(int i = curr + 1; i <= s.length(); i++) {
             String temp = s.substring(curr, i);
             if(set.contains(temp)) {
-                // System.out.println(temp);
                 currList.add(temp);
                 palindromePartitioning(i, currList, s, res, set);
                 currList.remove(currList.size() - 1);
             } else if(isPalindrome(temp)) {
-                // System.out.println(temp);
                 currList.add(temp);
                 palindromePartitioning(i, currList, s, res, set);
                 currList.remove(currList.size() - 1);
