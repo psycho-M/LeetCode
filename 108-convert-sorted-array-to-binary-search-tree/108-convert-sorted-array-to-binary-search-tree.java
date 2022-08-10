@@ -21,8 +21,6 @@ class Solution {
     }
     
     private TreeNode toBST(TreeNode root, int start, int end, int[] nums) {
-        if(start < 0 || end >= nums.length) return null;
-            
         int mid = (start + end) / 2;
         // System.out.println(start + " " + mid + " " + end);
         root = new TreeNode(nums[mid], null, null);
