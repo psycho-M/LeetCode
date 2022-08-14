@@ -29,6 +29,7 @@ class Solution {
         Map<String, Integer> currFreq = new HashMap<>();
         for(int i = 0; i < substring.length(); i += wLen) {
             String temp = substring.substring(i, i + wLen);
+            if(!freq.containsKey(temp)) return false;
             currFreq.put(temp, currFreq.getOrDefault(temp, 0) + 1);
         }
         
