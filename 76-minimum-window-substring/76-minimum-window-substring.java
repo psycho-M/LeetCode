@@ -56,7 +56,7 @@ class Solution {
         for(char c : t.toCharArray()) tFreq[c]++;
         int[] sFreq = new int[123];
         String res = "";
-        int l = 0, r = 0;
+        int l = 0, r = 0, minL = 0, minR = 0;
         while(r < m) {
             char currR = s.charAt(r);
             sFreq[currR]++;
@@ -65,7 +65,9 @@ class Solution {
                 
                 if(sFreq[c] == tFreq[c]) {
                     if(min > r - l) {
-                        res = s.substring(l, r + 1);
+                        // res = s.substring(l, r + 1);
+                        minL = l;
+                        minR = r + 1;
                         min = r - l;
                     }
                     break;
@@ -80,8 +82,8 @@ class Solution {
         
         // System.out.println(sFreq);
         if(containsAll(tFreq, sFreq) && min > r - l) res = s.substring(l, r);
-        
-        return res;
+        // System.out.println(s.substring(minL, minR) + " " + res);
+        return s.substring(minL, minR);
     }
     
     private boolean containsAll(int[] tFreq, int[] sFreq) {
