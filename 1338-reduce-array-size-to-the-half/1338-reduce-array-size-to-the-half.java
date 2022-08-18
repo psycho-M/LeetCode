@@ -3,12 +3,12 @@ class Solution {
         int n = arr.length;
         Map<Integer, Integer> map = new HashMap<>();
         for(int a : arr) map.put(a, map.getOrDefault(a, 0) + 1);
-        PriorityQueue<Integer> keyDesc = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
-        for(int key : map.keySet()) keyDesc.add(key);
+        PriorityQueue<Integer> keyDesc = new PriorityQueue<>((a, b) -> b - a);
+        for(int value : map.values()) keyDesc.add(value);
         int count = 0, removed = 0;
         
         while(removed < n / 2) {
-            removed += map.get(keyDesc.poll());
+            removed += keyDesc.poll();
             count++;
         }
         
