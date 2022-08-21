@@ -14,12 +14,11 @@ class Solution {
                 if (j == slen && sdiff) {
                     for (j = i, tdiff = true; j < slen + i; j++)
                         tChar[j] = '*';
-                    lans.add(i);
+                    lans.add(0, i);
                 }
             }
         for (i = 0; i < tChar.length; i++) if (tChar[i] != '*') return new int[]{};
         int[] res = new int[lans.size()];
-        Collections.reverse(lans);
         for (i = 0; i < lans.size(); i++) res[i] = lans.get(i);
         return res;
     }
