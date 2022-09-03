@@ -15,7 +15,8 @@ class Solution {
     
     private void getNs(String curr, int k, int n, Set<Integer> res) {
         if(n == 0) {
-            res.add(Integer.parseInt(curr));
+            int num = Integer.parseInt(curr);
+            if(!res.contains(num)) res.add(num);
             return;
         }
         
