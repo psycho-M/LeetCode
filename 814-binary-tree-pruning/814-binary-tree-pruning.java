@@ -20,11 +20,6 @@ class Solution {
     }
     
     private boolean toPrune(TreeNode root) {
-        if(root.left == null && root.right == null) {
-            if(root.val == 0) return true;
-            else return false;
-        }
-        
         if(root.left != null && toPrune(root.left)) root.left = null;
         if(root.right != null && toPrune(root.right)) root.right = null;
         
